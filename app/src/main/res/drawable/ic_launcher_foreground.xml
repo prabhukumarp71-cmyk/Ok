@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Mini status bar dots indicator at top within 66dp safe zone (y=30..36) -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M34,33 A2.5,2.5 0 1 1 34,33.01 Z" />
+    <path
+        android:fillColor="#60A5FA"
+        android:pathData="M41,33 A2.5,2.5 0 1 1 41,33.01 Z" />
+    <path
+        android:fillColor="#818CF8"
+        android:pathData="M48,33 A2.5,2.5 0 1 1 48,33.01 Z" />
+
+    <!-- Wi-Fi signal arc on top right -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M70,32 C72.5,30 75.5,30 78,32 L74,36 Z" />
+
+    <!-- Main Battery Body (Centered, rounded rect with terminal) -->
+    <!-- Outer Battery Shell: X from 30 to 74, Y from 42 to 74, Corner radius 6 -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M37,42 L67,42 C70.8,42 74,45.2 74,49 L74,67 C74,70.8 70.8,74 67,74 L37,74 C33.2,74 30,70.8 30,67 L30,49 C30,45.2 33.2,42 37,42 Z"
+        android:strokeWidth="3.2"
+        android:strokeColor="#FFFFFF" />
+
+    <!-- Battery Terminal positive cap on right (X=74 to 78, Y=52 to 64) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M75,53 C76.5,53 78,54.5 78,56 L78,60 C78,61.5 76.5,63 75,63 Z" />
+
+    <!-- Battery Inner Level Glow Fill (X=33 to 60, Y=45 to 71) -->
+    <path
+        android:pathData="M37,45 L58,45 C60.2,45 62,46.8 62,49 L62,67 C62,69.2 60.2,71 58,71 L37,71 C34.8,71 33,69.2 33,67 L33,49 C33,46.8 34.8,45 37,45 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="33"
+                android:startY="45"
+                android:endX="62"
+                android:endY="71"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#00F2FE" />
+                <item android:offset="1.0" android:color="#4FACFE" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Glowing Lightning Bolt icon inside battery -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52,47 L45,58 L51,58 L46,69 L57,56 L50,56 Z" />
+
+    <!-- Status Slider / Progress bar accent below battery (Y=79..81) -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M34,80 L70,80"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:strokeColor="#38BDF8" />
+</vector>

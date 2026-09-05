@@ -1,0 +1,6 @@
+{
+  "name": "Emoji Battery Themes",
+  "description": "Cute emoji battery themes, mascot indicators, status bar icons, and home screen overlay.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
