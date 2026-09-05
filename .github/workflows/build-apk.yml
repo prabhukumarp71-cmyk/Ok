@@ -69,17 +69,17 @@ jobs:
       - name: Build Debug APK
         run: |
           if [ -f gradlew ]; then
-            ./gradlew assembleDebug --no-daemon --stacktrace
+            ./gradlew assembleDebug -Djava.awt.headless=true -Pksp.run.in.process=false --no-daemon --stacktrace
           else
-            gradle assembleDebug --no-daemon --stacktrace
+            gradle assembleDebug -Djava.awt.headless=true -Pksp.run.in.process=false --no-daemon --stacktrace
           fi
 
       - name: Build Release APK
         run: |
           if [ -f gradlew ]; then
-            ./gradlew assembleRelease --no-daemon --stacktrace || echo "Release build fallback triggered"
+            ./gradlew assembleRelease -Djava.awt.headless=true -Pksp.run.in.process=false --no-daemon --stacktrace || echo "Release build fallback triggered"
           else
-            gradle assembleRelease --no-daemon --stacktrace || echo "Release build fallback triggered"
+            gradle assembleRelease -Djava.awt.headless=true -Pksp.run.in.process=false --no-daemon --stacktrace || echo "Release build fallback triggered"
           fi
 
       - name: Upload Debug APK
